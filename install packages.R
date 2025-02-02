@@ -30,5 +30,3 @@ install_and_verify(packages)
 
 # Optionally, load all installed packages (uncomment if needed)
 # lapply(packages, library, character.only = TRUE)
-
-test()
