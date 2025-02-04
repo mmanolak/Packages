@@ -9,8 +9,12 @@ missing_packages
 
 
 #windowsOS checker for dependent directory
-if (Sys.info()['sysname'] == "Windows") {
-  setwd("C:/Users/Michael/Desktop/Spring 2025/3 - Econ 256")
+if (sys_name == "Windows") {
+  if (node_name == "DegreeLaptop" || user_name == "Degree Laptop") { 
+    setwd("C:/Users/Degree Laptop/Desktop/Spring 2025/3 - Econ 256 (Data Vis)")
+  } else { 
+    setwd("C:/Users/Michael/Desktop/Spring 2025/3 - Econ 256")
+  }
   #LinuxOS Checker
 } else if (Sys.info()['sysname'] == "Linux") {
   setwd("~/Desktop/R Files/Econ256")
