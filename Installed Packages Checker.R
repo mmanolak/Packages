@@ -7,14 +7,12 @@ packages <- c("tidyverse", "wooldridge", "readxl", "haven", "dbplyr", "rvest",
 missing_packages <- packages[!sapply(packages, requireNamespace, quietly = TRUE)]
 missing_packages
 
-
 #windowsOS checker for dependent directory
-if (sys_name == "Windows") {
-  if (node_name == "DegreeLaptop" || user_name == "Degree Laptop") { 
-    setwd("C:/Users/Degree Laptop/Desktop/Spring 2025/3 - Econ 256 (Data Vis)")
-  } else { 
-    setwd("C:/Users/Michael/Desktop/Spring 2025/3 - Econ 256")
-  }
+if (Sys.info()['sysname'] == "Windows") {
+  if (Sys.info()['nodename'] == "DegreeLaptop" || Sys.getenv('USERNAME') == "Degree Laptop") { 
+    setwd("C:/Users/Degree Laptop/Desktop/Spring 2025/3 - Econ 256 (Data Vis)/exercise1")} 
+  else if (Sys.info()['nodename'] == "Michael" || Sys.getenv('USERNAME') == "Michael") { 
+    setwd("C:/Users/Michael/Desktop/Spring 2025/3 - Econ 256/R Studio Files/Econ256/exercise1")}
   #LinuxOS Checker
 } else if (Sys.info()['sysname'] == "Linux") {
   setwd("~/Desktop/R Files/Econ256")
@@ -26,6 +24,7 @@ if (sys_name == "Windows") {
 if (length(missing_packages) > 0) {
   print("The following packages are missing:")
   print(missing_packages)
+  stop("Required packages are missing. Please install them and try again.")
 } else {
   print("There are no missing packages.")
 }
