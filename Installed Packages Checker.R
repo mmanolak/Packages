@@ -13,7 +13,7 @@ if (Sys.info()['sysname'] == "Windows") {
   setwd("C:/Users/Michael/Desktop/Spring 2025/3 - Econ 256")
   #LinuxOS Checker
 } else if (Sys.info()['sysname'] == "Linux") {
-  setwd("~/Desktop/Spring 2025/3 - Econ 256")
+  setwd("~/Desktop/R Files/Econ256")
   #macOS check
 } else if (Sys.info()['sysname'] == "Darwin") {
   setwd("~/Desktop/Spring 2025/3 - Econ 256")}
