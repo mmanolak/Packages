@@ -1,5 +1,5 @@
 # List of packages to install and verify
-packages <- c("tidyverse", "wooldridge", "readxl", "haven", "dbplyr", "rvest", 
+packages <- c("tidyverse", "wooldridge", "readxl", "haven", "rvest", 
               "httr", "jsonlite", "lfe", "plm", "estimatr", "sandwich", 
               "lmtest", "vars", "tseries", "fable", "forecast", "urca", 
               "ggthemes", "gitcreds", "usethis", "installr")
