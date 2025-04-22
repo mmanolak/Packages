@@ -1,7 +1,5 @@
-packages <- c("tidyverse", "wooldridge", "readxl", "haven", "rvest", 
-              "httr", "jsonlite", "lfe", "plm", "estimatr", "sandwich", 
-              "lmtest", "vars", "tseries", "fable", "forecast", "urca", 
-              "ggthemes", "gitcreds", "usethis", "installr")
+# List of packages to install and verify
+packages <- c("tidyverse", "wooldridge", "plotly", "sf", "leaflet", "tidycensus")
 
 
 missing_packages <- packages[!sapply(packages, requireNamespace, quietly = TRUE)]
@@ -29,10 +27,8 @@ if (length(missing_packages) > 0) {
   print("There are no missing packages.")
 }
 
-
 osdisplay<-switch(Sys.info()[['sysname']],
-                  Windows= {print("I'm a Windows PC.")},
+                  Windows= {print("I'm a PC.")},
                   Linux  = {print("I'm a penguin.")},
                   Darwin = {print("I'm a Mac.")})
-
 
