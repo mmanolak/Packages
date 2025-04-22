@@ -1,8 +1,5 @@
 # List of packages to install and verify
-packages <- c("tidyverse", "wooldridge", "readxl", "haven", "rvest", 
-              "httr", "jsonlite", "lfe", "plm", "estimatr", "sandwich", 
-              "lmtest", "vars", "tseries", "fable", "forecast", "urca", 
-              "ggthemes", "gitcreds", "usethis", "installr")
+packages <- c("tidyverse", "wooldridge", "plotly", "sf", "leaflet", "tidycensus")
 
 # Function to check and install missing packages
 install_and_verify <- function(pkg_list) {
